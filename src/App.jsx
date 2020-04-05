@@ -1,7 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
+import HomeButton from './components/HomeButton';
+import NavBar from './components/NavBar';
 import './style/App.css';
 
+/*
 function App() {
   return (
     <div className="App">
@@ -22,5 +25,21 @@ function App() {
     </div>
   );
 }
+*/
+
+const App = () => {
+  const navBarDests = {
+    "Main": "/",
+    "Portfolio": "/portfolio",
+    "Blog": "/blag"
+  };
+
+  return (
+    <div className="App">
+      <HomeButton />
+      <NavBar links={navBarDests}/>
+    </div>
+  );
+};
 
 export default App;

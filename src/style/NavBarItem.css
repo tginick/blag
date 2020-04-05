@@ -1,0 +1,10 @@
+li.NavBarItem {
+    float: left;
+    cursor: pointer;
+}
+
+.NavBarItemContent {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
