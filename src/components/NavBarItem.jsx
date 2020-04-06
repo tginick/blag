@@ -6,7 +6,7 @@ const NavBarItem = (props) => {
     return (
         <li className="NavBarItem">
             <div className="NavBarItemContent">
-                <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={props.destination}>
+                <Link to={props.destination} className="NavBarLink">
                     {props.content}
                 </Link>
             </div>

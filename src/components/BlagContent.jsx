@@ -3,7 +3,7 @@ import React from 'react';
 const BlagContent = (props) => {
     return (
         <div className="BlagContent">
-            <h2>Blog Content</h2>
+            <h2>Currently under construction. Stay tuned!</h2>
         </div>
     );
 }

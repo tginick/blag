@@ -1,0 +1,40 @@
+input[type=text] {
+    background-color: #fafafa;
+    width: 60%;
+    display: block;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #777;
+    margin-bottom: 2em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: inherit;
+}
+
+textarea {
+    background-color: #fafafa;
+    width: 60%;
+    display: block;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #777;
+    margin-bottom: 2em;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    resize: none;
+    font-family: inherit;
+}
+
+button[type=submit].BasicButton {
+    background-color: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
