@@ -1,10 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route } from 'react-router-dom';
 import HomeButton from './components/HomeButton';
 import NavBar from './components/NavBar';
+import MainContent from './components/MainContent';
+import PortfolioContent from './components/PortfolioContent';
+import BlagContent from './components/BlagContent';
+import ContactContent from './components/ContactContent';
 import './style/App.css';
 
 /*
+import logo from './logo.svg';
+
 function App() {
   return (
     <div className="App">
@@ -37,14 +43,27 @@ const App = () => {
 
     return (
         <div className="App">
-         <div className="App-Header">
-           <HomeButton />
-           <NavBar links={navBarDests}/>
-          </div>
-          
-          <div className="App-Content">
+            <div className="App-Header">
+                <HomeButton />
+                <NavBar links={navBarDests}/>
+            </div>
 
-         </div>
+            <div className="App-Content">
+                <Switch>
+                    <Route path="/blag">
+                        <BlagContent />
+                    </Route>
+                    <Route path="/portfolio">
+                        <PortfolioContent />
+                    </Route>
+                    <Route path="/contactme">
+                        <ContactContent />
+                    </Route>
+                    <Route path="/">
+                        <MainContent />
+                    </Route>
+                </Switch>
+            </div>
         </div>
     );
 };

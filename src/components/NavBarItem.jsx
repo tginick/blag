@@ -1,15 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../style/NavBarItem.css';
 
 const NavBarItem = (props) => {
-    const onNavBarItemClicked = () => {
-        console.log("Clicked nav bar item. Navigating to ", props.destination);
-    };
-
     return (
         <li className="NavBarItem">
-            <div className="NavBarItemContent" onClick={onNavBarItemClicked}>
-                {props.content}
+            <div className="NavBarItemContent">
+                <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to={props.destination}>
+                    {props.content}
+                </Link>
             </div>
         </li>
     )
