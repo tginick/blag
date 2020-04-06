@@ -1,3 +1,9 @@
 .HomeButton {
-    cursor: pointer
+    font-size: 2.2em;
+    display: inline-block; /* makes the container shrink to fit */
+}
+
+.HomeButton h1 {
+    letter-spacing: 3px;
+    cursor: pointer;
 }

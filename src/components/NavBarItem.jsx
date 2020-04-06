@@ -7,8 +7,8 @@ const NavBarItem = (props) => {
     };
 
     return (
-        <li className="NavBarItem" onClick={onNavBarItemClicked}>
-            <div className="NavBarItemContent">
+        <li className="NavBarItem">
+            <div className="NavBarItemContent" onClick={onNavBarItemClicked}>
                 {props.content}
             </div>
         </li>

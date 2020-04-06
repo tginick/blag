@@ -7,11 +7,10 @@ const HomeButton = (props) => {
     };
 
     return (
-        <div className="HomeButton" onClick={onHomeButtonClicked}>
-            <h1>Nicholas Wong</h1>
+        <div className="HomeButton">
+            <h1 onClick={onHomeButtonClicked}>Nicholas Wong</h1>
         </div>
     );
 }
-    
 
 export default HomeButton;

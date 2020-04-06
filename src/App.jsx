@@ -28,18 +28,25 @@ function App() {
 */
 
 const App = () => {
-  const navBarDests = {
-    "Main": "/",
-    "Portfolio": "/portfolio",
-    "Blog": "/blag"
-  };
+    const navBarDests = {
+        "Main": "/",
+        "Portfolio": "/portfolio",
+        "Blog": "/blag",
+        "Contact": "/contactme"
+    };
 
-  return (
-    <div className="App">
-      <HomeButton />
-      <NavBar links={navBarDests}/>
-    </div>
-  );
+    return (
+        <div className="App">
+         <div className="App-Header">
+           <HomeButton />
+           <NavBar links={navBarDests}/>
+          </div>
+          
+          <div className="App-Content">
+
+         </div>
+        </div>
+    );
 };
 
 export default App;
