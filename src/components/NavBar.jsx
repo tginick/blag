@@ -4,7 +4,7 @@ import '../style/NavBar.css';
 
 const NavBar = ({ links }) => {
     const navBarElems = [];
-    for (const [content, destination] of Object.entries(links)) {
+    for (const [content, destination] of links) {
         navBarElems.push(<NavBarItem key={content + destination} content={content} destination={destination}/>);
     }
 

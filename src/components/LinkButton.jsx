@@ -4,7 +4,7 @@ import '../style/LinkButton.css';
 const LinkButton = ({ label, destination }) => {
     const onLinkButtonClick = (event) => {
         event.preventDefault();
-        window.open(destination, "_blank");
+        window.open(destination, "_blank", "noopener,noreferrer");
     }
 
     return (

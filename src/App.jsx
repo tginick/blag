@@ -8,38 +8,13 @@ import BlagContent from './components/BlagContent';
 import ContactContent from './components/ContactContent';
 import './style/App.css';
 
-/*
-import logo from './logo.svg';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
-
 const App = () => {
-    const navBarDests = {
-        "Main": "/",
-        "Portfolio": "/portfolio",
-        "Blog": "/blag",
-        "Contact": "/contactme"
-    };
+    const navBarDests = [
+        ["Main", "/", <MainContent />],
+        ["Portfolio", "/portfolio", <PortfolioContent />],
+        ["Blog", "/blag", <BlagContent />],
+        ["Contact", "/contactme", <ContactContent />]
+    ];
 
     return (
         <div className="App">
@@ -50,18 +25,9 @@ const App = () => {
 
             <div className="App-Content">
                 <Switch>
-                    <Route path="/blag">
-                        <BlagContent />
-                    </Route>
-                    <Route path="/portfolio">
-                        <PortfolioContent />
-                    </Route>
-                    <Route path="/contactme">
-                        <ContactContent />
-                    </Route>
-                    <Route path="/">
-                        <MainContent />
-                    </Route>
+                    {/* we must reverse because the catchall arm must appear last */
+                    navBarDests.slice(0).reverse().map(([_name, path, component]) => <Route path={path}>{component}</Route>) 
+                    }
                 </Switch>
             </div>
         </div>
