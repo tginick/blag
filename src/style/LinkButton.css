@@ -1,13 +1,9 @@
 
-button[type=submit].BasicButton:active {
-    background-color: black;
-    color: white;
-}
-
 button.LinkButton {
     width: 113px;
     height: 64px;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 8px;
     background-color: transparent;
     font-family: inherit;
     font-size: 1.25rem;
@@ -15,4 +11,9 @@ button.LinkButton {
     text-align: center;
     cursor: pointer;
     margin-right: 2em;
+}
+
+button.LinkButton:active {
+    background-color: black;
+    color: white;
 }

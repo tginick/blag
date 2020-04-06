@@ -27,7 +27,8 @@ textarea {
 
 button[type=submit].BasicButton {
     background-color: transparent;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 8px;
     cursor: pointer;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -38,3 +39,9 @@ button[type=submit].BasicButton {
     font-size: 1.25rem;
     letter-spacing: 2px;
 }
+
+button[type=submit].BasicButton:active {
+    background-color: black;
+    color: white;
+}
+
