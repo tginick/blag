@@ -4,7 +4,8 @@ import '../style/BlurbSlideshow.css';
 const BlurbSlideshow = ({ blurbs }) => {
     const numBlurbs = blurbs.length;
 
-    let [currentIdx, setCurrentIdx] = useState(Math.floor(Math.random() * Math.floor(numBlurbs)));
+    //let [currentIdx, setCurrentIdx] = useState(Math.floor(Math.random() * Math.floor(numBlurbs)));
+    let [currentIdx, setCurrentIdx] = useState(0);
 
     useEffect(() => {
         const updateInterval = setInterval(() => {

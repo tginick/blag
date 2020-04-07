@@ -1,14 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../style/LinkButton.css';
 
 const LinkButton = ({ label, destination }) => {
-    const onLinkButtonClick = (event) => {
-        event.preventDefault();
-        window.open(destination, "_blank", "noopener,noreferrer");
-    }
-
     return (
-        <button onClick={onLinkButtonClick} className="LinkButton">{label}</button>
+        <Link to={destination} className="LinkButton">
+            <div className="LinkButtonContent">
+                {label}
+            </div>
+        </Link>
     );
 };
 

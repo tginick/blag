@@ -1,6 +1,9 @@
+.BlurbSlideshowHolder {
+    margin-top: 3em;
+}
 .BlurbSlideshow {
-    width: 50%;
-    height: 200px;
+    width: 75%;
+    height: 250px;
     margin: auto;
     position: relative;
 }
