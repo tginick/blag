@@ -10,3 +10,10 @@
 .App-Content {
     height: 100%;
 }
+
+.Basic-Content {
+    padding-top: 8vh;
+
+    margin-left: 30vw;
+    margin-right: 10vw;
+}
