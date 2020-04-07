@@ -26,7 +26,7 @@ const App = () => {
             <div className="App-Content">
                 <Switch>
                     {/* we must reverse because the catchall arm must appear last */
-                    navBarDests.slice(0).reverse().map(([_name, path, component]) => <Route path={path}>{component}</Route>) 
+                    navBarDests.slice(0).reverse().map(([_name, path, component]) => <Route key={path} path={path}>{component}</Route>) 
                     }
                 </Switch>
             </div>

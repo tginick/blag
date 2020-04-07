@@ -1,10 +1,14 @@
 import React from 'react';
+import BlurbSlideshow from './BlurbSlideshow';
+import Blurbs from '../blurbs/Blurbs';
+import '../style/MainContent.css';
 
 const MainContent = (props) => {
     return (
         <div className="MainContent">
-            <p>Welcome to my website!</p>
+            <BlurbSlideshow blurbs={Blurbs} />
         </div>
+
     );
 }
 
