@@ -13,13 +13,14 @@
 @media only screen and (min-width: 768px) {
     .NavBar ul {
         display: block;
-    }
-
-    .NavBar.active ul{
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
+        font-size: 2em;
+    }
+
+    .NavBar.active ul{
         font-size: 2em;
     }
 }
