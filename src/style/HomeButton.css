@@ -1,6 +1,6 @@
 .HomeButton {
     display: inline-block; /* makes the container shrink to fit */
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .HomeButton h1 {
