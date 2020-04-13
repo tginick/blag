@@ -1,7 +1,7 @@
 .App-Header {
-    padding-left: 30vw;
-    padding-top: 1.5vw;
-    padding-right: 10vw;
+    padding-left: 15vw;
+    padding-top: 0.25vw;
+    padding-right: 5vw;
     padding-bottom: 2em;
     background-color: lavender;
 }
@@ -12,8 +12,23 @@
 }
 
 .Basic-Content {
-    padding-top: 8vh;
+    padding-top: 4vh;
+    margin-left: 15vw;
+    margin-right: 5vw;
+}
 
-    margin-left: 30vw;
-    margin-right: 10vw;
+@media only screen and (min-width: 768px) {
+    .App-Header {
+        padding-left: 30vw;
+        padding-top: 1.5vw;
+        padding-right: 10vw;
+        padding-bottom: 2em;
+    }
+
+    .Basic-Content {
+        padding-top: 8vh;
+    
+        margin-left: 30vw;
+        margin-right: 10vw;
+    }
 }

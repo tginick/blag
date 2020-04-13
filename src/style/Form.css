@@ -1,6 +1,6 @@
 input[type=text] {
     background-color: #fafafa;
-    width: 60%;
+    width: 90%;
     display: block;
     border: 0;
     outline: 0;
@@ -11,9 +11,10 @@ input[type=text] {
     font-family: inherit;
 }
 
+
 textarea {
     background-color: #fafafa;
-    width: 60%;
+    width: 90%;
     display: block;
     border: 0;
     outline: 0;
@@ -45,3 +46,14 @@ button[type=submit].BasicButton:active {
     color: white;
 }
 
+
+
+@media only screen and (min-width: 768px) {
+    input[type=text] {
+        width: 60%;
+    }
+
+    textarea {
+        width: 60%;
+    }
+}

@@ -4,17 +4,23 @@ import ContactForm from './ContactForm';
 import '../style/ContactContent.css';
 
 const ContactContent = (props) => {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(0);
 
-    const onFormSubmitted = () => {
-        setIsSubmitted(true);
+    const onFormSubmitted = (isSuccess) => {
+        setIsSubmitted(isSuccess ? 1 : 2);
     }
 
     var form = null;
-    if (isSubmitted) {
+    var errorMessage = null;
+
+    if (isSubmitted === 1) {
         form = <h3 style={{color: "green"}}>Hey, thanks! I'll be in touch shortly.</h3>;
     } else {
         form = <ContactForm onFormSubmitted={onFormSubmitted} />
+    }
+
+    if (isSubmitted === 2) {
+        errorMessage = <h3 style={{color: "red"}}>Oops...something went wrong. Please try again in a bit!</h3>
     }
 
     return (
@@ -28,6 +34,7 @@ const ContactContent = (props) => {
             <p>Please fill out the following form, and I will get back to you as soon as I can!</p>
             
             {form}
+            {errorMessage != null ? errorMessage : <div/>}
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from "axios";
 import '../style/Form.css';
 
 const ContactForm = ({ onFormSubmitted }) => {
@@ -21,7 +22,19 @@ const ContactForm = ({ onFormSubmitted }) => {
     const enterContactRequest = (event) => {
         event.preventDefault();
 
-        onFormSubmitted();
+        axios.post(process.env.REACT_APP_API_ENDPOINT + "newMessage", {
+            senderName: name,
+            senderEmail: email,
+            messageContent: message
+        })
+        .then(_ => {
+            onFormSubmitted(true);
+        })
+        .catch(response => {
+            console.log(response);
+            onFormSubmitted(false);
+        });
+
     };
 
     return (

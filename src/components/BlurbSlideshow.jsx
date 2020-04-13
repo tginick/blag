@@ -37,7 +37,7 @@ const BlurbSlideshow = ({ blurbs }) => {
     }
 
     return (
-        <div class="BlurbSlideshowHolder">
+        <div className="BlurbSlideshowHolder">
             <div className="BlurbSlideshow">
                 {blurbElems}
             </div>
